@@ -1,0 +1,106 @@
+body {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fcfbfa;
+  font-weight: 500;
+  display: grid;
+  justify-content: center;
+}
+.container {
+  display: grid;
+  grid-template-areas:
+    "names names"
+    "contact-info profile"
+    "skills education"
+    "languages experience";
+  gap: 4px;
+  max-width: 1200px;
+  min-height: fit-content;
+}
+.wrap {
+  background-color: #edbbc4;
+  border-radius: 25px;
+  padding: 2em;
+}
+.names {
+  grid-area: names;
+  display: grid;
+  justify-content: center;
+}
+.title {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+.image img {
+  position: relative;
+  border-radius: 50%;
+  margin: 2em;
+}
+.contact-info {
+  grid-area: contact-info;
+}
+.contact-info ul li {
+  list-style: none;
+  margin: 1em 0;
+}
+.icon {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+.profile {
+  grid-area: profile;
+}
+.profile p {
+  line-height: 1.5em;
+}
+.skills {
+  grid-area: skills;
+}
+.skills ul li {
+  list-style: none;
+  margin: 1.5em 0;
+}
+.skills ul li span {
+  margin: 0.5em;
+}
+.education {
+  grid-area: education;
+}
+
+.ed ul li {
+  list-style: none;
+  margin: 1.5em 0;
+  display: flex;
+  flex-direction: column;
+}
+.languages {
+  grid-area: languages;
+}
+.languages ul li {
+  list-style: none;
+  margin: 1.5em 0;
+}
+.experience {
+  grid-area: experience;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      "names"
+      "profile"
+      "skills"
+      "education"
+      "experience"
+      "contact-info"
+      "languages";
+    gap: 4px;
+    max-width: 100vw;
+    min-height: fit-content;
+  }
+}
